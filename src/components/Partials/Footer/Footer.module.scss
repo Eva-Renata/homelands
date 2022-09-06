@@ -1,0 +1,29 @@
+@import "../../../variables_and_mixins.scss";
+
+.footerwrapper{
+    background-color: $sort;
+    color: white;
+    display: flex;
+    padding:1em;
+    h3 {
+        margin-left: 10vw;
+        font-family: $logo_nav_font;
+        font-weight: lighter;
+        font-size: 2em;
+    }
+    p {
+        margin-left: 10vw;
+    }
+    .social {
+        margin-left: 5vw;
+        svg {
+            font-size: 2em; 
+            margin-left: 1vh;
+            &:hover {
+                fill:$brun;
+                cursor:pointer;
+            }
+        }
+    }
+    
+}
