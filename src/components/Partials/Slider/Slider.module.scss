@@ -1,0 +1,27 @@
+.sliderwrapper {
+    height:100%;
+    position: relative;
+    .leftarrow {
+        font-size: 2.5em;
+        position:absolute;
+        top:40%;
+        left:1%;
+        fill:white;
+        cursor: pointer;
+    }
+    .rightarrow {
+        font-size: 2.5em;
+        position: absolute;
+        top: 40%;
+        right:1%;
+        fill: white;
+        cursor: pointer;
+    }
+    .slidestyles {
+        width:100%;
+        height:100%;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+    }
+}
