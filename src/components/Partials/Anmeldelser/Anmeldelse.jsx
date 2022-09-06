@@ -6,7 +6,7 @@ import styles from "./Anmeldelser.module.scss";
 export const Anmeldelser = () => {
   //getting all the reviews
   const [anmeldelser, setAnmeldelser] = useState();
-  //gettine one random review from the list
+
   //   const anmeldelse =
   //     anmeldelser[Math.floor(Math.random() * anmeldelser.length)];
   //   console.log(anmeldelse.title);
@@ -22,15 +22,23 @@ export const Anmeldelser = () => {
     getData();
   }, []);
 
-  //   const anmeldelse =
-  //     anmeldelser[Math.floor(Math.random() * anmeldelser.length)];
-  //   console.log(anmeldelse.title);
+  //getting one random review from the list
+  const anmeldelse =
+    anmeldelser[Math.floor(Math.random() * anmeldelser.length)];
+  //console.log(anmeldelse.title);
+
   return (
     <section className={styles.reviewswrapper}>
       <h3>Det siger kunderne:</h3>
-      {/* <p>{anmeldelse.title}</p> */}
-      {/* <p>{anmeldelse.content}</p> */}
-      <a>Skriv en anmeldelse</a>
+      <section className={styles.onereview}>
+        <h5>{anmeldelse.title}</h5>
+        <p>"{anmeldelse.content}"</p>
+        <p>
+          {anmeldelse.user.firstname} {anmeldelse.user.lastname},{" "}
+          {anmeldelse.created_friendly}
+        </p>
+      </section>
+      <p className={styles.skriv}>Skriv en anmeldelse</p>
     </section>
   );
 };
