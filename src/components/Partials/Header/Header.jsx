@@ -11,19 +11,8 @@ export const Header = () => {
       </div>
       <div className={styles.right}>
         <NavBar />
-
         <input type="text" placeholder={"Indtast søgeord"} />
-        <BiSearch
-          style={{
-            background: "grey",
-            cursor: "pointer",
-            fontSize: "1.7em",
-            color: "white",
-            padding: "0.2em",
-            borderTopRightRadius: "4px",
-            borderBottomRightRadius: "4px",
-          }}
-        />
+        <BiSearch />
       </div>
     </header>
   );
