@@ -1,0 +1,16 @@
+@import '../../../variables_and_mixins.scss';
+
+.navlinks {
+    font-family: $logo_nav_font;
+    display: flex;
+    a {
+       padding:1em;
+       color:white;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: lighter;
+       &:hover {
+        color:$brun;
+       } 
+    }
+}

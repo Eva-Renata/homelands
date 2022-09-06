@@ -1,12 +1,19 @@
+
 *, body {
     margin:0;
     padding:0;
     box-sizing: border-box;
-    //odibee sans font
-    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-    //font-family: 'Ubuntu', sans-serif;
-    //trebuchet font
-    // .class {
-    //         font-family: Trebuchet MS, sans-serif;
-    //     }
+    /* remove list styles: bullets, numbers, underline */
+    ol,
+    ul,
+    menu,
+    a {
+        list-style: none;
+        text-decoration: none;
+    }
+
+    /* For images to not be able to exceed their container */
+    img {
+        max-width: 100%;
+    }
 }
