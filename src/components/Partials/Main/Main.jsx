@@ -1,7 +1,3 @@
-export const Main = () => {
-  return (
-    <main>
-      <h2>This is main</h2>
-    </main>
-  );
+export const Main = (props) => {
+  return <main>{props.children}</main>;
 };
