@@ -4,41 +4,39 @@ import axios from "axios";
 import styles from "./Anmeldelser.module.scss";
 
 export const Anmeldelser = () => {
-  //getting all the reviews
-  const [anmeldelser, setAnmeldelser] = useState();
-
-  //   const anmeldelse =
-  //     anmeldelser[Math.floor(Math.random() * anmeldelser.length)];
-  //   console.log(anmeldelse.title);
+  const [randomReview, setRandomReview] = useState();
 
   useEffect(() => {
     const getData = async () => {
       const result = await axios.get(
         "https://api.mediehuset.net/homelands/reviews"
       );
-      console.log(result.data.items);
-      setAnmeldelser(result.data.items);
+      //console.log(result);
+
+      //choosing a random one
+      const review =
+        result.data.items[Math.floor(Math.random() * result.data.items.length)];
+      //console.log(result.data.items);
+      setRandomReview(review);
     };
     getData();
   }, []);
 
-  //getting one random review from the list
-  const anmeldelse =
-    anmeldelser[Math.floor(Math.random() * anmeldelser.length)];
-  //console.log(anmeldelse.title);
-
   return (
-    <section className={styles.reviewswrapper}>
-      <h3>Det siger kunderne:</h3>
-      <section className={styles.onereview}>
-        <h5>{anmeldelse.title}</h5>
-        <p>"{anmeldelse.content}"</p>
-        <p>
-          {anmeldelse.user.firstname} {anmeldelse.user.lastname},{" "}
-          {anmeldelse.created_friendly}
-        </p>
+    //if there is a randomreview than we display it
+    randomReview && (
+      <section className={styles.reviewswrapper}>
+        <h3>Det siger kunderne:</h3>
+        <section className={styles.onereview}>
+          <h5>{randomReview.title}</h5>
+          <p>"{randomReview.content}"</p>
+          <p>
+            {randomReview.user.firstname} {randomReview.user.lastname},{" "}
+            {randomReview.created_friendly}
+          </p>
+        </section>
+        <p className={styles.skriv}>Skriv en anmeldelse</p>
       </section>
-      <p className={styles.skriv}>Skriv en anmeldelse</p>
-    </section>
+    )
   );
 };
