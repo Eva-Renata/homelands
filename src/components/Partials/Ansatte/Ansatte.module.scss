@@ -1,0 +1,44 @@
+.ansattewrapper {
+    padding-bottom: 5vh;
+    h3 {
+        padding:1em;
+        text-align: center;
+    }
+    .flex {
+        display: flex;
+        justify-content: center;
+        .figurewrapper {
+            padding:1em;
+            &:hover{
+                cursor: pointer;
+                .moreinfos {
+                    display: block; 
+                    //transition:  5s ease;
+                }
+            }
+            figure {
+                width:15vw;
+                height:32vh;
+                border: solid 1px grey;
+                background-size: cover;
+                position: relative;
+                padding-bottom: 5em;
+                figcaption {
+                    padding:0.5em;
+                    width: 15vw;
+                    position: absolute;
+                    border-top: solid 1px grey;
+                    bottom:0;
+                    background-color: rgba(255, 255, 255, 0.813);
+                    &:hover{
+                        background-color: rgba(79, 78, 78, 0.822);
+                        color:white;
+                    }
+                }
+            }
+            .moreinfos {
+                display: none;
+            }
+        }
+    }
+}

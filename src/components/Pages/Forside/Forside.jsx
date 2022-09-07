@@ -1,5 +1,7 @@
 import { Layout } from "../../App/Layout";
 import { Anmeldelser } from "../../Partials/Anmeldelser/Anmeldelse";
+import { Ansatte } from "../../Partials/Ansatte/Ansatte";
+import { Boliger } from "../../Partials/Boliger/Boliger";
 import { Slider } from "../../Partials/Slider/Slider";
 import styles from "./Forside.module.scss";
 
@@ -36,7 +38,9 @@ export const Forside = () => {
       <section className={styles.sliderCompWrapper}>
         <Slider slides={slides} />
       </section>
+      <Boliger />
       <Anmeldelser />
+      <Ansatte />
     </Layout>
   );
 };
