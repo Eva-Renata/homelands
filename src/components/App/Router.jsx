@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Forside } from "../Pages/Forside/Forside";
-import { Boliger } from "../Pages/Boliger/Boliger";
+import { BoligerTS } from "../Pages/Boliger til salg/BoligerTS";
 import { Login } from "../Pages/Login/Login";
 import { NotFound } from "../Pages/NotFound/NotFound";
 
@@ -9,7 +9,7 @@ export const AppRouter = () => {
     <Routes>
       <Route index element={<Forside />}></Route>
       <Route path="*" element={<NotFound />}></Route>
-      <Route path="/boliger" element={<Boliger />}></Route>
+      <Route path="/boliger" element={<BoligerTS />}></Route>
       <Route path="/login" element={<Login />}></Route>
     </Routes>
   );

@@ -1,6 +1,7 @@
 .boligerwrapper {
-    display:flex;
-    justify-content: center;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 2em;
     position:absolute;
     top:53%;
     left:8%;

@@ -1,8 +1,10 @@
 .boligwrapper {
+    box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.08);
     figure {
         background-color: rgba(255, 255, 255, 0.813);
         padding:1em;
-        margin: 1em;
         width:25vw;
         border: solid 1px grey;
         &:hover {
