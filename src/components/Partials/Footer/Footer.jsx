@@ -4,11 +4,20 @@ import {
   AiFillInstagram,
   AiFillLinkedin,
 } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
     <footer className={styles.footerwrapper}>
-      <h3>HomeLands</h3>
+      {/* onclick the name go to homepage top */}
+      <NavLink
+        to={"/"}
+        onClick={() => {
+          document.documentElement.scrollTop = 0;
+        }}
+      >
+        <h3>HomeLands</h3>
+      </NavLink>
       <div>
         <p>Øster Uttrupvej 5</p>
         <p>9000 Aalborg</p>
