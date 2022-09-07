@@ -22,6 +22,9 @@ export const Anmeldelser = () => {
     getData();
   }, []);
 
+  //making useState for showing the anmeldelse formular
+  const [slide, setSlide] = useState(false);
+
   return (
     //if there is a randomreview than we display it
     randomReview && (
@@ -35,7 +38,32 @@ export const Anmeldelser = () => {
             {randomReview.created_friendly}
           </p>
         </section>
-        <p className={styles.skriv}>Skriv en anmeldelse</p>
+
+        {/* showing only on slide */}
+        {slide && (
+          <section className={styles.slidein}>
+            <form action="">
+              <div>
+                <label htmlFor="titel">Titel:</label>
+                <input type="text" name="titel" />
+              </div>
+              <div>
+                <label htmlFor="annmeldelse">Anmeldelse</label>
+                <input
+                  type="text"
+                  name="annmeldelse"
+                  // style={{ height: "10vh" }}
+                />
+              </div>
+              <button>Send</button>
+            </form>
+          </section>
+        )}
+
+        {/* onclick we are settiing the slide */}
+        <p className={styles.skriv} onClick={() => setSlide(!slide)}>
+          {slide === true ? "Luk" : "Skriv en anmeldelse"}
+        </p>
       </section>
     )
   );
