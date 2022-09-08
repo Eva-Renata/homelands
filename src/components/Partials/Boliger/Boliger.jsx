@@ -2,9 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Bolig } from "./Bolig";
 import styles from "./Boliger.module.scss";
+import { useParams } from "react-router-dom";
 
 export const Boliger = () => {
   const [boliger, setBoliger] = useState();
+  const { bolig_id } = useParams(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -26,7 +28,9 @@ export const Boliger = () => {
       {/* mapping boliger with bolig component (to be reused) */}
       {boliger &&
         boliger.map((bolig) => {
-          return <Bolig key={bolig.id} data={bolig}></Bolig>;
+          return (
+            <Bolig key={bolig.id} data={bolig} bolig_id={bolig_id}></Bolig>
+          );
         })}
     </section>
   );

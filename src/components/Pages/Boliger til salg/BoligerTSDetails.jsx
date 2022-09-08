@@ -50,7 +50,7 @@ export const BoligerTSDetails = () => {
             />
           </section>
 
-          <section className={styles.background}>
+          <section className={styles.backgrounddetails}>
             <section className={styles.detaljer}>
               <div>
                 <h3>{boligerTSD.address}</h3>

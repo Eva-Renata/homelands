@@ -8,8 +8,13 @@ import { BoligerTSDetails } from "../Pages/Boliger til salg/BoligerTSDetails";
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route index element={<Forside />}></Route>
+      <Route path="/">
+        <Route index element={<Forside />}></Route>
+        <Route path=":bolig_id" element={<BoligerTSDetails />}></Route>
+      </Route>
+
       <Route path="*" element={<NotFound />}></Route>
+
       <Route path="/boliger">
         <Route index element={<BoligerTS />}></Route>
         <Route path=":bolig_id" element={<BoligerTSDetails />}></Route>
