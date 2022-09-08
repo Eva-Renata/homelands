@@ -7,7 +7,6 @@ import styles from "./BoligerTSDetails.module.scss";
 import { AiFillCamera, AiOutlineBorderRight } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
 import { AiOutlineHeart } from "react-icons/ai";
-import { Ansat } from "../../Partials/Ansatte/Ansat";
 
 export const BoligerTSDetails = () => {
   const [boligerTSD, setBoligerTSD] = useState();
