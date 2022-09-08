@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Bolig.module.scss";
 
 export const Bolig = (props) => {
@@ -14,33 +15,35 @@ export const Bolig = (props) => {
 
   return (
     <section className={styles.boligwrapper}>
-      <figure>
-        {/* main picture, or medium */}
-        <img
-          src={mainPicture || bolig.images[0].filename.medium}
-          alt={mainPicture}
-        ></img>
-        <figcaption>
-          <h4>{bolig.address}</h4>
-          <p>
-            {bolig.zipcode} {bolig.city}
-          </p>
-          <p>{bolig.type}</p>
-          <div className={styles.bottompart}>
-            <div className={styles.left}>
-              <span>{bolig.energy_label_name}</span>
-              <p>
-                {bolig.num_rooms} værelser, {bolig.floor_space} m2
+      <NavLink to={`${bolig.id}`}>
+        <figure>
+          {/* main picture, or medium */}
+          <img
+            src={mainPicture || bolig.images[0].filename.medium}
+            alt={mainPicture}
+          ></img>
+          <figcaption>
+            <h4>{bolig.address}</h4>
+            <p>
+              {bolig.zipcode} {bolig.city}
+            </p>
+            <p>{bolig.type}</p>
+            <div className={styles.bottompart}>
+              <div className={styles.left}>
+                <span>{bolig.energy_label_name}</span>
+                <p>
+                  {bolig.num_rooms} værelser, {bolig.floor_space} m2
+                </p>
+              </div>
+
+              <p className={styles.price}>
+                {/* formatting the number to have separator */}
+                {new Intl.NumberFormat("da").format(bolig.price)} DKK
               </p>
             </div>
-
-            <p className={styles.price}>
-              {/* formatting the number to have separator */}
-              {new Intl.NumberFormat("da").format(bolig.price)} DKK
-            </p>
-          </div>
-        </figcaption>
-      </figure>
+          </figcaption>
+        </figure>
+      </NavLink>
     </section>
   );
 };

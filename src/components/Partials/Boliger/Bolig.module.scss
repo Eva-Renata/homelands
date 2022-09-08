@@ -1,4 +1,5 @@
 .boligwrapper {
+    
     box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.08);
     -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.08);
@@ -16,6 +17,7 @@
             height:20vh;
         }
         figcaption {
+            color: black;
             h4 {
                 padding-bottom:0.5em;
             }

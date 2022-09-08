@@ -1,6 +1,7 @@
 import { Layout } from "../../App/Layout";
 import styles from "./BoligerTS.module.scss";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Bolig } from "../../Partials/Boliger/Bolig";
 //import Select from "react-select";
@@ -8,6 +9,7 @@ import { Bolig } from "../../Partials/Boliger/Bolig";
 export const BoligerTS = () => {
   const [boligerTS, setBoligerTS] = useState();
   const [filtered, setFiltered] = useState([]);
+  const { bolig_id } = useParams(0);
 
   // making options for the select
   // const options = [
@@ -72,7 +74,13 @@ export const BoligerTS = () => {
       <section className={styles.boligerTSwrapper}>
         {filtered &&
           filtered.map((boligerTS) => {
-            return <Bolig key={boligerTS.id} data={boligerTS}></Bolig>;
+            return (
+              <Bolig
+                key={boligerTS.id}
+                data={boligerTS}
+                bolig_id={bolig_id}
+              ></Bolig>
+            );
           })}
       </section>
     </Layout>
