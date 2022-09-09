@@ -4,22 +4,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Bolig } from "../../Partials/Boliger/Bolig";
-//import Select from "react-select";
 
 export const BoligerTS = () => {
   const [boligerTS, setBoligerTS] = useState();
   const [filtered, setFiltered] = useState([]);
   const { bolig_id } = useParams(0);
-
-  // making options for the select
-  // const options = [
-  //   { value: "Villa", label: "Villa" },
-  //   { value: "Ejerlejlighed", label: "Ejerlejlighed" },
-  //   { value: "Andelsbolig", label: "Andelsbolig" },
-  // ];
-
-  //component for select
-  // const MyComponent = () => <Select options={options} />;
 
   useEffect(() => {
     const getData = async () => {
@@ -46,7 +35,6 @@ export const BoligerTS = () => {
     <Layout title="Boliger" description="Boliger til salg">
       <h2>Boliger til salg</h2>
       <div className={styles.select}>
-        {/* <MyComponent options={options} />  */}
         <select onChange={(event) => filterItem(event)}>
           <option value="Alle" onClick={() => setFiltered("all")}>
             Alle boliger
