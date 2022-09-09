@@ -6,3 +6,13 @@
     top:53%;
     left:8%;
 }
+@media only screen and (max-width: 1000px){
+    .boligerwrapper {
+        display: block;
+        position: relative;
+        width:80%;
+        figure{
+            margin:1em;
+        }
+    }
+}

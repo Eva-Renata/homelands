@@ -29,7 +29,7 @@
     .detaljer {
         display: flex;
         justify-content: space-between;
-
+        @media only screen and (max-width: 650px) { display: block;}
         h3 {
             font-size: 1.8em;
         }
@@ -48,6 +48,9 @@
             .icons {
                 display: grid;
                 grid-template-columns: auto auto;
+                @media only screen and (max-width: 650px) {
+                        display: block;
+                    }
                 svg {
                     font-size: 3em;
                     cursor: pointer;
@@ -62,6 +65,9 @@
             .priswrapper {
                     display: flex;
                     justify-content: flex-end;
+                    @media only screen and (max-width: 650px) {
+                            justify-content: flex-start;
+                        }
                     p {
                         margin: 0.8em 0.8em 0 0;
                     }
@@ -72,9 +78,15 @@
         display: flex;
         justify-content: space-between;
         padding-top: 5vh;
-       
+    @media only screen and (max-width: 650px) {
+            display: block;
+        }
         .flexing {
             width:15vw;
+            @media only screen and (max-width: 650px) {
+                    width: 40vw;
+                    margin: auto;
+                }
             >*{
                 display:flex;
                 justify-content: space-between;

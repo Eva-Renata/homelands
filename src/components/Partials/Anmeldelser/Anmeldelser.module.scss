@@ -4,12 +4,18 @@
     margin-top: 40vh;
     text-align: center;
     position: relative;
+    @media only screen and (max-width: 1000px){
+        margin-top:10vh;
+    }
     h3 {
         padding:1em;
     }
     .onereview {
         background-color: $rosa;
         height:20vh;
+        @media only screen and (max-width: 1000px) {
+                height:30vh;
+            }
         h5 {
             padding: 1em;
         }
@@ -22,6 +28,9 @@
         color:white;
         background-color: rgb(49, 48, 48);
         height:20vh;
+        @media only screen and (max-width: 1000px) {
+                height: 30vh;
+            }
         width:100%;
         position: absolute;
         top:7.8vh;

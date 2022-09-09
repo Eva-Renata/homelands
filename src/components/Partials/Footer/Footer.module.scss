@@ -5,6 +5,9 @@
     color: white;
     display: flex;
     padding:1em;
+    @media only screen and (max-width: 800px){
+        display: block;
+    }
     h3 {
         color:white;
         margin-left: 10vw;
@@ -14,9 +17,16 @@
     }
     p {
         margin-left: 10vw;
+        @media only screen and (max-width: 800px){
+            margin-left: 8vw;
+            padding: 1em;
+        }
     }
     .social {
         margin-left: 5vw;
+        @media only screen and (max-width: 800px) {
+                margin-left: 10vw;
+            }
         svg {
             font-size: 2em; 
             margin-left: 1vh;
