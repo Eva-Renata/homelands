@@ -20,3 +20,10 @@ h2 {
     margin: auto;
     padding-bottom: 5vh;
 }
+
+//TABLET AND MOBIL
+@media only screen and (max-width: 1000px) {
+    .boligerTSwrapper{
+        display: block;
+    }
+}
