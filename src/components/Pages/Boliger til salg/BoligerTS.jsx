@@ -35,8 +35,11 @@ export const BoligerTS = () => {
     <Layout title="Boliger" description="Boliger til salg">
       <h2>Boliger til salg</h2>
       <div className={styles.select}>
-        <select onChange={(event) => filterItem(event)}>
-          <option value="Alle" onClick={() => setFiltered("all")}>
+        <select
+          onChange={(event) => filterItem(event)}
+          className={styles.select}
+        >
+          <option value="Alle" onClick={() => setFiltered("boligerTS")}>
             Alle boliger
           </option>
           <option value="Villa" onClick={() => filterItem("Villa")}>

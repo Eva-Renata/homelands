@@ -3,10 +3,13 @@ h2 {
     padding:1em;
 }
 .select {
-    width:21vw;
+    width:15vw;
+    margin-left:65%;
     padding:1em;
-    text-align: center;
-    margin-left: 70%;
+    option{
+        padding:1em;
+        font-size: 1.3em;
+    }
 }
 .boligerTSwrapper {
     display: grid;
