@@ -34,9 +34,10 @@ export const BoligerTS = () => {
   }, []);
 
   //filtering boliger
-  const filterItem = (villatype) => {
+  const filterItem = (event) => {
+    const villatype = event.target.value;
     const updatedItem = boligerTS.filter((curElem) => {
-      return curElem.result.data.items.type === villatype;
+      return villatype === "all" || curElem.type === villatype;
     });
     setFiltered(updatedItem);
   };
@@ -46,8 +47,8 @@ export const BoligerTS = () => {
       <h2>Boliger til salg</h2>
       <div className={styles.select}>
         {/* <MyComponent options={options} />  */}
-        <select>
-          <option value="Alle" onClick={() => setFiltered(boligerTS)}>
+        <select onChange={(event) => filterItem(event)}>
+          <option value="Alle" onClick={() => setFiltered("all")}>
             Alle boliger
           </option>
           <option value="Villa" onClick={() => filterItem("Villa")}>

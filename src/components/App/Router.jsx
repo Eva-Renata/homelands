@@ -12,9 +12,7 @@ export const AppRouter = () => {
         <Route index element={<Forside />}></Route>
         <Route path=":bolig_id" element={<BoligerTSDetails />}></Route>
       </Route>
-
       <Route path="*" element={<NotFound />}></Route>
-
       <Route path="/boliger">
         <Route index element={<BoligerTS />}></Route>
         <Route path=":bolig_id" element={<BoligerTSDetails />}></Route>
