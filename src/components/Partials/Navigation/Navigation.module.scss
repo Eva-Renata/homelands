@@ -24,7 +24,7 @@
     }
    .hambrgerwrapper {
     display: block;
-    margin-left: -20vw;
+    //margin-left: -20vw;
    }
 }
 @media only screen and (max-width: 650px) {
@@ -35,5 +35,21 @@
     .hambrgerwrapper {
         display: block;
         margin-left: -12vw;
+    }
+}
+.navlinksopen {
+    font-family: $logo_nav_font;
+    width:30vw;
+    a {
+       padding-top: 1em;
+        color: white;
+        cursor: pointer;
+        font-size: 1.5em;
+        font-weight: lighter;
+        letter-spacing: 0.1em;
+
+        &:hover {
+            color: $brun;
+        }
     }
 }
