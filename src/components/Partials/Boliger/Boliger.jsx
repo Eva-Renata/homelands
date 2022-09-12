@@ -4,8 +4,11 @@ import { Bolig } from "./Bolig";
 import styles from "./Boliger.module.scss";
 import { useParams } from "react-router-dom";
 
+//exporting a function named component
 export const Boliger = () => {
   const [boliger, setBoliger] = useState();
+  //useparams kommer fra routeren
+  //du skal vide hvilken id du klikker på
   const { bolig_id } = useParams(0);
 
   useEffect(() => {
