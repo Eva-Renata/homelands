@@ -25,23 +25,10 @@ export const BoligerTSDetails = () => {
     //vi skriver i dependency product_id, så den re-renderer hver gang vi trykker på id.
   }, [bolig_id]);
 
-  //need to find the main picture
-  //   let mainPicture;
-  //for each bolig images should be a main. if it is not, we take the medium
-  //   boligerTSD.images.forEach((image) => {
-  //     if (image.is_main === "1") {
-  //       mainPicture = image.filename.medium;
-  //     }
-  //   });
-
   return (
     <Layout title="Bolig detaljer">
       {boligerTSD ? (
         <section className={styles.detaljerside}>
-          {/* <img
-            src={mainPicture || boligerTSD.images[0].filename.medium}
-            alt={mainPicture}
-          ></img> */}
           <section className={styles.imagewrapper}>
             <img
               src={boligerTSD.images[0].filename.large}
@@ -136,7 +123,7 @@ export const BoligerTSDetails = () => {
                 </div>
                 <div>
                   <p>Liggetid:</p>
-                  <p>{boligerTSD.date_friendly}</p>
+                  <p>siden {boligerTSD.date_friendly}</p>
                 </div>
               </div>
               <div className={styles.flexing}>

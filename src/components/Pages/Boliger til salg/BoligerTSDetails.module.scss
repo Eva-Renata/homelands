@@ -105,8 +105,11 @@
         display: grid;
         grid-template-columns: 60% 40% ;
         padding-top: 5em;
+        
         :first-child {
             padding: 2em;
+            //converting long API texts into having more air between them
+            white-space: pre-wrap;
         }
         :last-child {
             img {
