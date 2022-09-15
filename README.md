@@ -11,4 +11,11 @@ For at kunne se projektet du kan gøre følgende:
 3. Til at starte projektet op:
 ### $ npm start
 
-
+ ## Dette projekt blev stylet med SCSS, en sprog af SASS program
+ ## I dette projekt følgende npm pakker var installeret:
+ npm i sass
+ npm i react-router-dom
+ npm i react-hook-form
+ npm i axios
+ npm i react-icons
+ npm i hamburger-react
