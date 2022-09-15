@@ -1,7 +1,7 @@
 import { NavBar } from "../Navigation/NavBar";
 import styles from "./Header.module.scss";
-import { BiSearch } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
+import { SearchBar } from "../Search/SearchBar";
 
 export const Header = () => {
   return (
@@ -14,8 +14,7 @@ export const Header = () => {
       </div>
       <div className={styles.right}>
         <NavBar />
-        <input type="text" placeholder={"Indtast søgeord"} />
-        <BiSearch />
+        <SearchBar />
       </div>
     </header>
   );

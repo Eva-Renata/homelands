@@ -15,7 +15,7 @@ export const BoligerTS = () => {
       const result = await axios.get(
         "https://api.mediehuset.net/homelands/homes"
       );
-      console.log(result.data.items);
+      //console.log(result.data.items);
       setBoligerTS(result.data.items);
       setFiltered(result.data.items);
     };

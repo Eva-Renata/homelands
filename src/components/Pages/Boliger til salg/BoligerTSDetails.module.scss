@@ -34,6 +34,10 @@
             font-size: 1.8em;
         }
         .icons {
+            button {
+                border:none;
+                background-color: transparent;
+               
             svg {
                 font-size: 3.5em;
                 margin: 0.2em;
@@ -42,6 +46,12 @@
                 border: solid 1px grey;
                 border-radius: 50%;
             }
+           }
+           .active {
+            svg {
+                background-color: red;
+            }
+           }
         }
 
         @media only screen and (max-width: 1000px) {

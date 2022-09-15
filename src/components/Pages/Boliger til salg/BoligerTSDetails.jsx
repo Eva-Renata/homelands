@@ -6,7 +6,8 @@ import { Layout } from "../../App/Layout";
 import styles from "./BoligerTSDetails.module.scss";
 import { AiFillCamera, AiOutlineBorderRight } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
-import { AiOutlineHeart } from "react-icons/ai";
+//import { AiOutlineHeart } from "react-icons/ai";
+import { FavoriteButton } from "./FavoriteButton";
 
 export const BoligerTSDetails = () => {
   const [boligerTSD, setBoligerTSD] = useState();
@@ -50,10 +51,21 @@ export const BoligerTSDetails = () => {
               </div>
 
               <section className={styles.icons}>
-                <AiFillCamera />
-                <AiOutlineBorderRight />
-                <ImLocation />
-                <AiOutlineHeart />
+                <button>
+                  <AiFillCamera />
+                </button>
+                <button>
+                  <AiOutlineBorderRight />
+                </button>
+                <button>
+                  <ImLocation />
+                </button>
+                {/* <button>
+                  <AiOutlineHeart />
+                </button> */}
+
+                {/* button component */}
+                <FavoriteButton product_id={boligerTSD.id} />
               </section>
 
               <section className={styles.rightside}>

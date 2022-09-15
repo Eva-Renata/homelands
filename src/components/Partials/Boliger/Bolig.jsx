@@ -15,7 +15,7 @@ export const Bolig = (props) => {
 
   return (
     <section className={styles.boligwrapper}>
-      <NavLink to={`${bolig.id}`}>
+      <NavLink to={`/boliger/${bolig.id}`}>
         <figure>
           {/* main picture, or medium */}
           <img

@@ -4,6 +4,7 @@ import { BoligerTS } from "../Pages/Boliger til salg/BoligerTS";
 import { Login } from "../Pages/Login/Login";
 import { NotFound } from "../Pages/NotFound/NotFound";
 import { BoligerTSDetails } from "../Pages/Boliger til salg/BoligerTSDetails";
+import { SearchResult } from "../Partials/Search/SearchResult";
 
 export const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ export const AppRouter = () => {
         <Route path=":bolig_id" element={<BoligerTSDetails />}></Route>
       </Route>
       <Route path="/login" element={<Login />}></Route>
+      <Route path="/search" element={<SearchResult />}></Route>
     </Routes>
   );
 };
